@@ -16,7 +16,10 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
   const session = await auth()
-  if (!session || session.user.role !== 'admin') return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+  const role = (session?.user as { role?: string } | undefined)?.role
+  if (!session || role !== 'admin') {
+    return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+  }
 
   const { name, email, password } = await request.json()
   const hashedPassword = await bcrypt.hash(password, 10)
