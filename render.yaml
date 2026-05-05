@@ -7,6 +7,11 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
+      - key: DATABASE_URL
+        fromService:
+          type: pserv
+          name: student-management-db
+          property: connectionString
       - key: NEXTAUTH_SECRET
         generateValue: true
       - key: NEXTAUTH_URL
