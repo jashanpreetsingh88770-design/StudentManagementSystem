@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: student-management-system
+    runtime: node
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXTAUTH_SECRET
+        generateValue: true
+      - key: NEXTAUTH_URL
+        fromService:
+          type: web
+          name: student-management-system
+          property: host
+    plan: starter
+
+  - type: pserv
+    name: student-management-db
+    runtime: pserv
+    plan: starter
+    envVars:
+      - key: POSTGRES_DB
+        value: student_management
+      - key: POSTGRES_USER
+        value: student_management_user
+      - key: POSTGRES_PASSWORD
+        generateValue: true
+
+databases:
+  - name: student-management-db
+    databaseName: student_management
+    user: student_management_user
+    plan: starter
