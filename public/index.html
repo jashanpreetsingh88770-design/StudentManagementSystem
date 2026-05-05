@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica',
+                'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 600px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+        .links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        a {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        a:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        .info {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        .info h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .info p {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        code {
+            background: #e0e0e0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Student Management System</h1>
+        <p class="subtitle">A modern web application for managing students, courses, and grades</p>
+        
+        <div class="links">
+            <a href="/">🚀 Go to App</a>
+            <a href="https://github.com" target="_blank">🐙 GitHub</a>
+            <a href="https://render.com" target="_blank">🌐 Render</a>
+        </div>
+
+        <div class="info">
+            <h3>🔧 Quick Start</h3>
+            <p>
+                <strong>Local Development:</strong><br>
+                <code>npm run dev</code><br>
+                Access at <code>http://localhost:3000</code>
+            </p>
+        </div>
+
+        <div class="info">
+            <h3>📦 Technology Stack</h3>
+            <p>
+                • Next.js 16.2.4<br>
+                • React 19<br>
+                • TypeScript<br>
+                • Prisma ORM<br>
+                • PostgreSQL<br>
+                • NextAuth.js<br>
+                • Tailwind CSS
+            </p>
+        </div>
+
+        <div class="info">
+            <h3>🚀 Deployment</h3>
+            <p>
+                This application is configured for deployment on <strong>Render</strong><br>
+                Build Command: <code>npm run build</code><br>
+                Start Command: <code>npm start</code>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
