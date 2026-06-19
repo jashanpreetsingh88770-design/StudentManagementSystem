@@ -6,7 +6,7 @@ import { useSession } from "next-auth/react"
 
 type Course = {
   id: string
-  name: string
+  name: null
   description: string | null
   teacher: {
     id: string
